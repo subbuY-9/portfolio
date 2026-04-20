@@ -123,14 +123,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.avatar-img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #6c63ff;
-  box-shadow: 0 20px 60px rgba(108, 99, 255, 0.3);
-}
+
 .avatar-circle {
   width: 250px;
   height: 250px;
@@ -226,77 +219,56 @@ body {
   color: #333;
   font-size: 0.9rem;
 }
-/* Sub-title for Skills sections */
-.sub-title {
-  text-align: center;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #555;
-  margin-bottom: 25px;
-  position: relative;
-}
 
-.sub-title::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #6c63ff;
-  margin: 8px auto 0;
-  border-radius: 5px;
-}/* PROJECT IMAGE */
-.project-img {
-  width: 10%;
-  height: 20px;
-  border-radius: 15px 15px 0 0;
-  overflow: hidden;
-  position: relative;
-  background: #ede9fe;
-}
-
-.project-img img {
-  width: 10%;
-  height: 10%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.project-card:hover .project-img img {
-  transform: scale(1.05);
-}
-
-/* Placeholder if image missing */
-.img-placeholder {
-  position: absolute;
-  top: 0; left: 0;
-  width: 10%; height: 10%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: #ede9fe;
-  color: #6c63ff;
-}
-
-.img-placeholder i { font-size: 2.5rem; margin-bottom: 8px; }
-.img-placeholder p { font-size: 0.85rem; font-weight: 600; }
-
-/* PROJECT BODY */
-.project-body {
-  padding: 20px 25px 25px;
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .project-card {
   background: #fff;
   border-radius: 15px;
+  padding: 30px;
   box-shadow: 0 5px 20px rgba(0,0,0,0.07);
   transition: transform 0.3s;
-  overflow: hidden;
-  padding: 0; /* Remove old padding, now handled by project-body */
 }
 
 .project-card:hover { transform: translateY(-5px); }
+
+.project-icon {
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #6c63ff, #a78bfa);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.project-icon i {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.project-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.project-card p {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
 .tags { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .tags span {
