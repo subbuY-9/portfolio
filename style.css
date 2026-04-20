@@ -226,7 +226,25 @@ body {
   color: #333;
   font-size: 0.9rem;
 }
+/* Sub-title for Skills sections */
+.sub-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 25px;
+  position: relative;
+}
 
+.sub-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #6c63ff;
+  margin: 8px auto 0;
+  border-radius: 5px;
+}
 /* PROJECTS */
 .projects-grid {
   display: grid;
