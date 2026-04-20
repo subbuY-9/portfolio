@@ -53,100 +53,46 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 120px 60px 60px;
+  padding: 120px 80px 60px;
   background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+  gap: 40px;
 }
 
-.hero-content { max-width: 600px; }
-
-.greeting {
-  font-size: 1.1rem;
-  color: #6c63ff;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.hero-content h1 {
-  font-size: 3.2rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 10px 0;
-}
-
-.hero-content h1 span { color: #6c63ff; }
-
-.hero-content h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 15px;
-}
-
-.hero-desc {
-  color: #666;
-  margin-bottom: 30px;
-  font-size: 1rem;
-}
-
-.hero-btns { display: flex; gap: 15px; }
-
-.btn {
-  padding: 12px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: all 0.3s;
-}
-
-.btn.primary {
-  background: #6c63ff;
-  color: #fff;
-  border: 2px solid #6c63ff;
-}
-
-.btn.primary:hover { background: #574fd6; }
-
-.btn.secondary {
-  background: transparent;
-  color: #6c63ff;
-  border: 2px solid #6c63ff;
-}
-
-.btn.secondary:hover {
-  background: #6c63ff;
-  color: #fff;
+.hero-content {
+  max-width: 580px;
+  flex: 1;
 }
 
 .hero-avatar {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .avatar-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
+  width: 280px;
+  height: 320px;
+  border-radius: 20px;
   object-fit: cover;
   object-position: top;
-  border: 4px solid #6c63ff;
-  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.3);
-
-}
-.avatar-circle {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #6c63ff, #a78bfa);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  font-weight: 700;
-  color: #fff;
+  border: 5px solid #6c63ff;
   box-shadow: 0 20px 60px rgba(108, 99, 255, 0.3);
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 100px 20px 40px;
+    text-align: center;
+  }
+  .hero-btns { justify-content: center; }
+  .avatar-img {
+    width: 180px;
+    height: 200px;
+  }
+}
 /* SECTIONS */
 .section {
   padding: 80px 60px;
