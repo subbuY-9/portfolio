@@ -122,6 +122,24 @@ body {
   color: #fff;
 }
 
+/* ✅ ADD THIS BELOW */
+.btn.cv {
+  background: transparent;
+  color: #1a1a2e;
+  border: 2px solid #1a1a2e;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.btn.cv:hover {
+  background: #1a1a2e;
+  color: #fff;
+}
+
 .hero-avatar {
   flex: 0 0 380px;
   display: flex;
