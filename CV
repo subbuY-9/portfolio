@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subbarayudu Yemisetty - CV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12.5px;
+      color: #222;
+      background: #f0f0f0;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      background: #fff;
+      margin: 30px auto;
+      padding: 0;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.15);
+    }
+
+    /* HEADER */
+    .header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 28px 40px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .header h1 span { color: #a78bfa; }
+
+    .header h2 {
+      font-size: 13px;
+      font-weight: 400;
+      color: #a78bfa;
+      margin-top: 3px;
+      letter-spacing: 0.5px;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 12px;
+      align-items: center;
+    }
+
+    .contact-bar a,
+    .contact-bar span {
+      color: #ccc;
+      font-size: 11px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .contact-bar a:hover { color: #a78bfa; }
+
+    .dot {
+      width: 3px; height: 3px;
+      background: #a78bfa;
+      border-radius: 50%;
+    }
+
+    /* BODY LAYOUT */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 195px 1fr;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background: #f9f9ff;
+      padding: 25px 18px;
+      border-right: 1px solid #ede9fe;
+    }
+
+    .sidebar-section { margin-bottom: 22px; }
+
+    .sidebar-section-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: #6c63ff;
+      border-bottom: 2px solid #6c63ff;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    .sidebar-item { margin-bottom: 10px; }
+
+    .sidebar-item-title {
+      font-weight: 700;
+      font-size: 11.5px;
+      color: #1a1a2e;
+      line-height: 1.4;
+    }
+
+    .sidebar-item-sub {
+      font-size: 10.5px;
+      color: #666;
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+
+    .sidebar-item-date {
+      font-size: 10.5px;
+      color: #6c63ff;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* SKILL TAGS */
+    .skill-group { margin-bottom: 12px; }
+
+    .skill-group-title {
+      font-size: 10px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .skill-tag {
+      background: #ede9fe;
+      color: #6c63ff;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    /* MAIN */
+    .main { padding: 25px 30px; }
+
+    .cv-section { margin-bottom: 22px; }
+
+    .cv-section-title {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #6c63ff;
+      border-bottom: 2px solid #6c63ff;
+      padding-bottom: 4px;
+      margin-bottom: 13px;
+    }
+
+    /* PROFILE */
+    .profile-text {
+      font-size: 11.5px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .profile-text span {
+      color: #6c63ff;
+      font-weight: 600;
+    }
+
+    /* ITEMS */
+    .item { margin-bottom: 15px; }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .item-title {
+      font-weight: 700;
+      font-size: 12.5px;
+      color: #1a1a2e;
+    }
+
+    .item-date {
+      font-size: 10px;
+      color: #6c63ff;
+      font-weight: 600;
+      white-space: nowrap;
+      background: #ede9fe;
+      padding: 2px 9px;
+      border-radius: 20px;
+    }
+
+    .item-subtitle {
+      font-size: 11px;
+      color: #6c63ff;
+      font-weight: 600;
+      margin: 2px 0 5px;
+    }
+
+    .item ul {
+      padding-left: 15px;
+      color: #444;
+    }
+
+    .item ul li {
+      font-size: 11.5px;
+      line-height: 1.7;
+      margin-bottom: 2px;
+    }
+
+    .item ul li strong { color: #1a1a2e; }
+
+    /* MODULES GRID */
+    .modules-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .module-tag {
+      background: #f0f4ff;
+      color: #3b3b8f;
+      border: 1px solid #c7d2fe;
+      padding: 3px 10px;
+      border-radius: 5px;
+      font-size: 10.5px;
+      font-weight: 500;
+    }
+
+    /* AVAILABILITY BADGE */
+    .availability {
+      display: inline-block;
+      background: #d1fae5;
+      color: #065f46;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 10.5px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    /* PRINT */
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; width: 100%; }
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Subbarayudu <span>Yemisetty</span></h1>
+    <h2>Data Science Internship Candidate | ML | Analytics | Python</h2>
+    <div class="contact-bar">
+      <span>📍 Leicester, England, UK</span>
+      <span class="dot"></span>
+      <a href="mailto:subbarayuduyemisetty@gmail.com">✉ subbarayuduyemisetty@gmail.com</a>
+      <span class="dot"></span>
+      <a href="https://www.linkedin.com/in/s-yemisetty-" target="_blank">🔗 linkedin.com/in/s-yemisetty-</a>
+      <span class="dot"></span>
+      <a href="https://subbuY-9.github.io/portfolio/" target="_blank">🌐 Portfolio</a>
+      <span class="dot"></span>
+      <a href="https://github.com/subbuY-9" target="_blank">🐙 github.com/subbuY-9</a>
+    </div>
+    <div class="availability">✅ Available for Internship – Immediate Start</div>
+  </div>
+
+  <!-- CV BODY -->
+  <div class="cv-body">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <!-- EDUCATION -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Education</div>
+
+        <div class="sidebar-item">
+          <div class="sidebar-item-title">MSc Data Science with Industry</div>
+          <div class="sidebar-item-sub">University of Leicester, UK</div>
+          <div class="sidebar-item-date">2025 – Present</div>
+        </div>
+
+        <div class="sidebar-item">
+          <div class="sidebar-item-title">BTech in Data Science</div>
+          <div class="sidebar-item-sub">Santhiram Engineering College (JNTUA), India</div>
+          <div class="sidebar-item-date">2021 – 2025</div>
+        </div>
+      </div>
+
+      <!-- TECHNICAL SKILLS -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Technical Skills</div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Programming</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Machine Learning</div>
+          <div class="skill-tags">
+            <span class="skill-tag">ML Modelling</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">NLP</span>
+            <span class="skill-tag">Computer Vision</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Analytics & BI</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Advanced Excel</span>
+            <span class="skill-tag">Statistics</span>
+            <span class="skill-tag">Data Visualisation</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <div class="skill-group-title">Libraries</div>
+          <div class="skill-tags">
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">Seaborn</span>
+            <span class="skill-tag">OpenCV</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- AREAS OF INTEREST -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Interests</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Healthcare AI</span>
+          <span class="skill-tag">Fraud Detection</span>
+          <span class="skill-tag">Predictive Modelling</span>
+          <span class="skill-tag">Risk Analytics</span>
+        </div>
+      </div>
+
+      <!-- LANGUAGES -->
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Languages</div>
+        <div class="sidebar-item">
+          <div class="sidebar-item-title">English</div>
+          <div class="sidebar-item-sub">Professional Proficiency</div>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-item-title">Telugu</div>
+          <div class="sidebar-item-sub">Native</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <!-- PERSONAL PROFILE -->
+      <div class="cv-section">
+        <div class="cv-section-title">Personal Profile</div>
+        <p class="profile-text">
+          A motivated and results-driven Data Science graduate currently pursuing an
+          <span>MSc in Data Science with Industry</span> at the University of Leicester.
+          Skilled in Python, SQL, Machine Learning, Power BI, and Statistical Analysis,
+          with hands-on experience in building predictive models and interactive dashboards.
+          <span>Actively seeking a Data Science internship</span> to apply academic knowledge
+          to real-world industry challenges, particularly in healthcare analytics, fraud
+          detection, and data-driven decision making.
+        </p>
+      </div>
+
+      <!-- KEY PROJECTS -->
+      <div class="cv-section">
+        <div class="cv-section-title">Key Projects</div>
+
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Healthcare Fraud Detection System</div>
+            <div class="item-date">2024</div>
+          </div>
+          <div class="item-subtitle">Python | SQL | Pandas | NumPy | Scikit-Learn | Machine Learning</div>
+          <ul>
+            <li>Built an end-to-end fraud detection pipeline using Python and SQL to identify <strong>suspicious healthcare claims</strong></li>
+            <li>Performed data preprocessing, feature engineering, and EDA on <strong>large-scale healthcare datasets</strong></li>
+            <li>Applied and compared ML algorithms (Random Forest, XGBoost) to detect anomalous patterns</li>
+            <li>Optimised model performance through hyperparameter tuning, achieving <strong>improved detection accuracy</strong></li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">AI-Based Eye Tracking & Drowsiness Detection</div>
+            <div class="item-date">2024</div>
+          </div>
+          <div class="item-subtitle">Python | OpenCV | Computer Vision | Machine Learning</div>
+          <ul>
+            <li>Developed a <strong>real-time drowsiness detection system</strong> processing live video streams using OpenCV</li>
+            <li>Implemented Eye Aspect Ratio (EAR) algorithm to accurately measure fatigue indicators</li>
+            <li>Built an automated alert system to enhance <strong>driver safety</strong> and reduce accident risk</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Sales Data Analysis Dashboard</div>
+            <div class="item-date">2024</div>
+          </div>
+          <div class="item-subtitle">Power BI | Python | SQL | Excel | Data Visualisation</div>
+          <ul>
+            <li>Analysed a retail sales dataset using SQL and Python to uncover <strong>key business insights</strong></li>
+            <li>Designed an interactive <strong>Power BI dashboard</strong> tracking KPIs: sales, profit margins, and regional trends</li>
+            <li>Delivered actionable recommendations that supported <strong>data-driven decision making</strong></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- RELEVANT MODULES -->
+      <div class="cv-section">
+        <div class="cv-section-title">Relevant Modules</div>
+        <div class="modules-grid">
+          <span class="module-tag">Machine Learning</span>
+          <span class="module-tag">Data Mining</span>
+          <span class="module-tag">Statistical Analysis</span>
+          <span class="module-tag">Deep Learning</span>
+          <span class="module-tag">Natural Language Processing</span>
+          <span class="module-tag">Database Management</span>
+          <span class="module-tag">Data Visualisation</span>
+          <span class="module-tag">Big Data Analytics</span>
+          <span class="module-tag">Python Programming</span>
+          <span class="module-tag">Research Methods</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
